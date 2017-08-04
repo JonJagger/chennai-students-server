@@ -1,5 +1,5 @@
 
-require_relative '../helpers/image_index_helper'
+require_relative '../models/images'
 
 class MemoryController < ApplicationController
 
@@ -7,14 +7,13 @@ class MemoryController < ApplicationController
     erb :memory
   end
 
-  include ImageIndexHelper
   get '/image_index' do
-    @names = image_index
+    @names = Images.all
     erb :image_index
   end
 
   get '/image_index_shuffled' do
-    @names = image_index.shuffle
+    @names = Images.all.shuffle
     erb :image_index
   end
 
