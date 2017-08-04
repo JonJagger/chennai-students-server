@@ -39,7 +39,7 @@ $(document).ready(function() {
   };
 
   $.ajax({
-    url: '/image_index',
+    url: '/image_index_shuffled',
     success: function(data){
       $(data).find('li').each(function() {
         let name = $(this).text();

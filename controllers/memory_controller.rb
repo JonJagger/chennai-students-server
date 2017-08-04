@@ -13,4 +13,9 @@ class MemoryController < ApplicationController
     erb :image_index
   end
 
+  get '/image_index_shuffled' do
+    @names = image_index.shuffle
+    erb :image_index
+  end
+
 end
