@@ -3,8 +3,17 @@
 
 $(document).ready(function() {
 
+  let images = $('images ul');
+  for (let name of <%= @names %>) {
+    images.append($('<li>').text(name));
+  }
+
 });
 
 //--></script>
 
 Image index
+<images>
+  <ul>
+  </ul>
+</images>

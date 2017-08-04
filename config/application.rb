@@ -8,6 +8,7 @@ require File.expand_path(File.join('controllers', 'application_controller'))
 
 Dir[File.join('helpers', '**/*._helper.rb')].each { |file|
   require File.expand_path(file)
+  puts "#{file} required..."
 }
 Dir[File.join('controllers', '**/*_controller.rb')].each { |file|
   require File.expand_path(file)
