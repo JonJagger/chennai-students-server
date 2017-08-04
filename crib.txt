@@ -4,3 +4,6 @@ $ rackup --port=4567
 
 In the browser go to
 http://localhost:4567
+
+To run the tests
+$ rake test
