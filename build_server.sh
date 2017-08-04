@@ -7,4 +7,4 @@ chmod +x /usr/local/bin/docker-compose
 git clone https://github.com/JonJagger/chennai-students-server.git
 
 echo "$ cd chennai-students-server"
-echo "$ ./up.sh"
+echo "$ sudo ./up.sh"
