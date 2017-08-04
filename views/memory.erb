@@ -55,6 +55,10 @@ $(document).ready(function() {
     });
   };
 
+  $('#shuffle').click(function() {
+    window.location.reload();
+  });
+
   $.ajax({
     url: '/image_index_shuffled',
     success: function(data){
@@ -71,3 +75,6 @@ $(document).ready(function() {
 //--></script>
 
 <students></students>
+
+<button id='shuffle'>shuffle</button>
+
