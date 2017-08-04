@@ -7,3 +7,11 @@ http://localhost:4567
 
 To run the tests
 $ rake test
+
+Commands I ran to build the infrastructure
+
+$ rvm get stable
+$ rvm install ruby-2.4.0
+$ gem install --no-rdoc --no-ri sinatra
+$ gem install --no-rdoc --no-ri install bundler
+$ bundle install
