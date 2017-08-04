@@ -1,0 +1,16 @@
+
+version: '2'
+
+services:
+  memory:
+    user: root
+    image: cyberdojo/memory:1.0
+    container_name: memory
+    read_only: true
+    tmpfs: /tmp
+    build:
+      context: app
+      args:
+        - PORT=${MEMORY_PORT}
+    ports:
+      - ${MEMORY_PORT}:${MEMORY_PORT}
