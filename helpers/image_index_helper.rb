@@ -2,15 +2,12 @@
 module ImageIndexHelper
 
   def image_index
-    # TODO: read these from public/img dir
-    %w(
-      Akhil Akshaya Arun ArunKumar Ashwin Krishna
-      Deekshita Divya Francis Gayathri Heamanth
-      Madhu Manisha Karthick Mihir Murali
-      Neeharika Prakash Prakhyat Sanjana Sankara
-      Sariha Shravan Sindhura Srikar Surya
-      Tharun Uma Vamshi Veena Vignesh Vinay
-    )
+    img_dir = File.expand_path('../public/img', File.dirname(__FILE__))
+    files = []
+    Dir.glob("#{img_dir}/*.png") do |img_file|
+      files << File.basename(img_file, '.png')
+    end
+    files
   end
 
 end
