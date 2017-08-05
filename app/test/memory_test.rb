@@ -11,13 +11,12 @@ class MemoryTest < AppTest
     assert_response 200
   end
 
-  def test_image_index
+  def test_images_index
     get '/images/index'
     assert_response 200
-  end
-
-  def test_image_index_shuffled
-    get '/images/index_shuffled'
+    get '/images/index?shuffled=false'
+    assert_response 200
+    get '/images/index?shuffled=true'
     assert_response 200
   end
 

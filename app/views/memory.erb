@@ -68,7 +68,7 @@ $(document).ready(function() {
   });
 
   $.ajax({
-    url: '/images/index_shuffled',
+    url: '/images/index?shuffled=true',
     success: function(data){
       $(data).find('li').each(function() {
         let filename = $(this).text();
