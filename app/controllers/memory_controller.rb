@@ -9,9 +9,7 @@ class MemoryController < ApplicationController
 
   get '/images/index' do
     @filenames = Images.filenames
-    if params['shuffled'] === 'true'
-      @filenames.shuffle!
-    end
+    @filenames.shuffle! if params['shuffled'] === 'true'
     erb :images_index
   end
 
