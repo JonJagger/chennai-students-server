@@ -1,7 +1,7 @@
 
 class Images
 
-  def self.all
+  def self.filenames
     filenames = []
     extensions.each do |extension|
       Dir.glob("#{img_dir}/*#{extension}").each { |img_file|

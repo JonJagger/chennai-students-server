@@ -8,12 +8,12 @@ class MemoryController < ApplicationController
   end
 
   get '/images/index' do
-    @names = Images.all
+    @filenames = Images.filenames
     erb :image_index
   end
 
   get '/images/index_shuffled' do
-    @names = Images.all.shuffle
+    @filenames = Images.filenames.shuffle
     erb :image_index
   end
 
