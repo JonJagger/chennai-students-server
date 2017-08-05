@@ -8,6 +8,7 @@ class MemoryController < ApplicationController
   end
 
   get '/images/index' do
+    headers( "Access-Control-Allow-Origin" => "*")
     @filenames = Images.filenames
     @filenames.shuffle! if params['shuffled'] === 'true'
     erb :images_index
