@@ -12,7 +12,7 @@ class MemoryController < ApplicationController
     if params['shuffled'] === 'true'
       @filenames.shuffle!
     end
-    erb :image_index
+    erb :images_index
   end
 
 end
