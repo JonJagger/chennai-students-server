@@ -7,12 +7,12 @@ class MemoryController < ApplicationController
     erb :memory
   end
 
-  get '/image_index' do
+  get '/images/index' do
     @names = Images.all
     erb :image_index
   end
 
-  get '/image_index_shuffled' do
+  get '/images/index_shuffled' do
     @names = Images.all.shuffle
     erb :image_index
   end
