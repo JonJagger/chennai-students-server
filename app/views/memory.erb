@@ -38,11 +38,11 @@
 
 $(document).ready(function() {
 
-  let image = function(name) {
+  let image = function(filename) {
     return $('<img>', {
       'class':'student',
-      'title':name,
-      'src':`img/${name}.png`
+      'title':filename.substring(0,filename.indexOf('.')),
+      'src':`img/${filename}`
      });
   };
 
@@ -68,11 +68,11 @@ $(document).ready(function() {
   });
 
   $.ajax({
-    url: '/image_index_shuffled',
+    url: '/images/index_shuffled',
     success: function(data){
       $(data).find('li').each(function() {
-        let name = $(this).text();
-        let student = image(name);
+        let filename = $(this).text();
+        let student = image(filename);
         $('students').append(tipped(student));
       });
     }
