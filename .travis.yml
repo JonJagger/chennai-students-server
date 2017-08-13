@@ -2,9 +2,4 @@ sudo: required
 services: docker
 
 script:
-    - docker-compose --version
-    - cd sh
-    - ./image_build.sh
-    - ./up.sh
-    - ./test.sh
-    - ./push_image.sh
+    - ./pipe_build_up_test.sh
