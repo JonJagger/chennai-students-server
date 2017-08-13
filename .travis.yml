@@ -3,7 +3,8 @@ services: docker
 
 script:
     - docker-compose --version
-    - ./build_image.sh
+    - cd sh
+    - ./image_build.sh
     - ./up.sh
     - ./test.sh
     - ./push_image.sh
