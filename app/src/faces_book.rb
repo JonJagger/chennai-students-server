@@ -1,7 +1,7 @@
+require 'sinatra/base'
+require_relative './images'
 
-require_relative '../models/images'
-
-class FacesController < ApplicationController
+class FacesBook < Sinatra::Base
 
   get '/' do
     erb :faces

@@ -1,10 +1,6 @@
-require 'test_helper'
+require 'test_base'
 
-class FacesTest < AppTest
-
-  def app
-    FacesController
-  end
+class FacesTest < TestBase
 
   def test_get_root
     get '/'
@@ -19,19 +15,5 @@ class FacesTest < AppTest
     get '/faces/index?shuffled=true'
     assert_response ok
   end
-
-  def test_get_not_found
-    get '/not_found'
-    assert_response not_found
-  end
-
-  private
-
-  def assert_response(n)
-    assert_equal n, last_response.status
-  end
-
-  def ok; 200; end
-  def not_found; 404; end
 
 end

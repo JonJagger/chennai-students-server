@@ -1,3 +1,5 @@
 #!/bin/bash
 
-docker exec -it memory sh -c 'rake test'
+readonly MY_DIR="$( cd "$( dirname "${0}" )" && pwd )"
+source ${MY_DIR}/../.env
+docker exec -it ${FACES_BOOK_CONTAINER} sh -c 'rake test'

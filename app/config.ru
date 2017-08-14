@@ -1,3 +1,2 @@
-require File.expand_path(File.join('config', 'application'))
-
-map('/') { run FacesController }
+require_relative './src/faces_book'
+run FacesBook.new

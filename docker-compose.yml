@@ -2,15 +2,14 @@
 version: '2'
 
 services:
-  memory:
+  faces-book:
     user: root
-    image: cyberdojo/chennai-students-server:1.0
-    container_name: memory
-    read_only: true
+    image: ${FACES_BOOK_IMAGE}
+    container_name: ${FACES_BOOK_CONTAINER}
     tmpfs: /tmp
     build:
       context: app
       args:
-        - PORT=${MEMORY_PORT}
+        - PORT=${FACES_BOOK_PORT}
     ports:
-      - ${MEMORY_PORT}:${MEMORY_PORT}
+      - ${FACES_BOOK_PORT}:${FACES_BOOK_PORT}
