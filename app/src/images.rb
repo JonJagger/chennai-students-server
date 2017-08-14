@@ -14,7 +14,7 @@ class Images
   private
 
   def self.img_dir
-    File.expand_path('../public/img', File.dirname(__FILE__))
+    File.expand_path('./public/img', File.dirname(__FILE__))
   end
 
   def self.extensions
