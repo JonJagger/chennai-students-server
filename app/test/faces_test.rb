@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class MemoryTest < AppTest
+class FacesTest < AppTest
 
   def app
-    MemoryController
+    FacesController
   end
 
   def test_get_root
@@ -11,12 +11,12 @@ class MemoryTest < AppTest
     assert_response ok
   end
 
-  def test_images_index
-    get '/images/index'
+  def test_faces_index
+    get '/faces/index'
     assert_response ok
-    get '/images/index?shuffled=false'
+    get '/faces/index?shuffled=false'
     assert_response ok
-    get '/images/index?shuffled=true'
+    get '/faces/index?shuffled=true'
     assert_response ok
   end
 

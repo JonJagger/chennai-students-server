@@ -1,17 +1,16 @@
 
 require_relative '../models/images'
 
-class MemoryController < ApplicationController
+class FacesController < ApplicationController
 
   get '/' do
-    erb :memory
+    erb :faces
   end
 
-  get '/images/index' do
-    headers( "Access-Control-Allow-Origin" => "*")
+  get '/faces/index' do
     @filenames = Images.filenames
     @filenames.shuffle! if params['shuffled'] === 'true'
-    erb :images_index
+    erb :faces_index
   end
 
 end

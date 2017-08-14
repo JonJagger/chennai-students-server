@@ -20,12 +20,12 @@
         background-color: white;
     }
 
-    students {
+    faces {
         display: block;
         width: 900px;
     }
 
-    img.student {
+    img.face {
         width: 90px;
         height: 90px;
         border-radius: 55px;
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
   const image = function(filename) {
     return $('<img>', {
-      'class':'student',
+      'class':'face',
       'title':filename.substring(0,filename.indexOf('.')),
       'src':`img/${filename}`
      });
@@ -68,12 +68,12 @@ $(document).ready(function() {
   });
 
   $.ajax({
-    url: '/images/index?shuffled=true',
+    url: '/faces/index?shuffled=true',
     success: function(data){
       $(data).find('li').each(function() {
         let filename = $(this).text();
-        let student = image(filename);
-        $('students').append(tipped(student));
+        let face = image(filename);
+        $('faces').append(tipped(face));
       });
     }
   });
@@ -83,4 +83,4 @@ $(document).ready(function() {
 //--></script>
 
 <button id='shuffle'>shuffle</button>
-<students></students>
+<faces></faces>
