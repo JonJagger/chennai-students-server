@@ -5,7 +5,7 @@ services:
   faces-book:
     user: root
     image: jonjagger/faces-book:2.0
-    container_name: faces-book
+    container_name: ${FACES_BOOK_CONTAINER}
     tmpfs: /tmp
     build:
       context: app
