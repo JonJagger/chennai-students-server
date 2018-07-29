@@ -13,7 +13,7 @@ Runs inside a [Docker](https://www.docker.com/) container.
 Try it now using the awesome
 [play with docker](http://labs.play-with-docker.com/)
 
-Click the recaptcha, add a new instance, and in the terminal type these three commands:
+Login, add a new instance, and in the terminal type these three commands:
 ```
 git clone https://github.com/JonJagger/faces-book.git
 cd faces-book
