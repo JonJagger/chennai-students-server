@@ -1,0 +1,32 @@
+@media screen {
+
+    * {
+        font-family: "Impact";
+        font-size: 30px;
+    }
+
+    body {
+        padding-top: 50px;
+        padding-left: 100px;
+    }
+
+    #shuffle {
+        font-weight: 800;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-size: 35px;
+        background-color: white;
+    }
+
+    faces {
+        display: block;
+        width: 900px;
+    }
+
+    img.face {
+        width: 90px;
+        height: 90px;
+        border-radius: 55px;
+        margin: 3px;
+    }
+}

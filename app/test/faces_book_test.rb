@@ -1,6 +1,6 @@
 require 'test_base'
 
-class FacesTest < TestBase
+class FacesBookTest < TestBase
 
   def test_get_root
     get '/'
