@@ -4,12 +4,13 @@ version: '2'
 services:
   faces-book:
     user: root
-    image: ${FACES_BOOK_IMAGE}
-    container_name: ${FACES_BOOK_CONTAINER}
+    image: jonjagger/faces-book:2.0
+    container_name: faces-book
     tmpfs: /tmp
     build:
       context: app
       args:
+        - FACES_BOOK_HOME=${FACES_BOOK_HOME}
         - PORT=${FACES_BOOK_PORT}
     ports:
       - ${FACES_BOOK_PORT}:${FACES_BOOK_PORT}
