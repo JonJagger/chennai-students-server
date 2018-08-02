@@ -18,11 +18,6 @@
         background-color: white;
     }
 
-    faces {
-        display: block;
-        width: 900px;
-    }
-
     img.face {
         width: 90px;
         height: 90px;
